@@ -1,0 +1,3 @@
+C:/Users/kkucz/CLionProjects/wielomaszynowy/cmake-build-debug/CMakeFiles/wielomaszynowy.dir
+C:/Users/kkucz/CLionProjects/wielomaszynowy/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/kkucz/CLionProjects/wielomaszynowy/cmake-build-debug/CMakeFiles/rebuild_cache.dir

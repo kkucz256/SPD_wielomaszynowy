@@ -1,0 +1,13 @@
+# ninja log v5
+13	509	7352481575505819	CMakeFiles/wielomaszynowy.dir/Problem.cpp.obj	9eb18aa71f96ed72
+3	429	7352481574710623	CMakeFiles/wielomaszynowy.dir/main.cpp.obj	89a1bd7ddb072c57
+16	449	7352474296519589	CMakeFiles/wielomaszynowy.dir/Machine.cpp.obj	9844a5b275e376f6
+509	611	7352481576510603	wielomaszynowy.exe	d0f9bf01f23fcd7b
+1	133	7352486713269244	build.ninja	7798af65c319aa1f
+21	510	7352492322934366	CMakeFiles/wielomaszynowy.dir/Result.cpp.obj	72218a9bb02f688d
+13	533	7352492323184371	CMakeFiles/wielomaszynowy.dir/Machine.cpp.obj	9844a5b275e376f6
+2	444	7352494199539153	CMakeFiles/wielomaszynowy.dir/main.cpp.obj	89a1bd7ddb072c57
+13	460	7352494199699157	CMakeFiles/wielomaszynowy.dir/Machine.cpp.obj	9844a5b275e376f6
+20	471	7352494199809110	CMakeFiles/wielomaszynowy.dir/Result.cpp.obj	72218a9bb02f688d
+16	537	7352494200469169	CMakeFiles/wielomaszynowy.dir/Problem.cpp.obj	9eb18aa71f96ed72
+537	651	7352494201589516	wielomaszynowy.exe	5723d5cd02163cd5
