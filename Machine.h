@@ -14,12 +14,8 @@ class Machine {
 public:
     Machine();
     vector<int> get_tasks();
-    int get_index();
-
     void add_task(int number);
-    void print_tasks();
     int sum_tasks();
-
 };
 
 #endif // MACHINE_H
