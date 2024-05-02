@@ -3,6 +3,7 @@
 
 #include "Machine.h"
 #include "Result.h"
+#include <cmath>
 
 class Problem {
     vector<int> tasks;
@@ -12,6 +13,7 @@ public:
     Result LSA();
     Result LPT();
     Result dynamic_programming();
+    Result bruteforce();
 };
 
 #endif // PROBLEM_H

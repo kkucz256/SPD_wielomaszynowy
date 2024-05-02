@@ -94,7 +94,6 @@ Result Problem::dynamic_programming() {
     }
 
 
-
     //Printing the matrix
     /*
     for (int i = 0; i < rows; ++i) {
@@ -132,6 +131,66 @@ Result Problem::dynamic_programming() {
 }
 
 
+
+Result Problem::bruteforce(){
+    Machine best_machinen1 = Machine();
+    Machine best_machinen2 = Machine();
+    std::vector<int> tasks_copy = tasks;
+
+    int best_cmax = INT_MAX;
+    long int all_combinations = pow(2,size(tasks));
+
+    for(int i=0; i < all_combinations ;++i){
+        Machine machine1 = Machine();
+        Machine machine2 = Machine();
+
+        for(int j=0; j < size(tasks); ++j){
+
+            if(i & (1 <<j)){
+                machine1.add_task(tasks[j]);
+            }
+            else {
+                machine2.add_task(tasks[j]);
+            }
+        }
+        //Check if tasks were spread
+            int cmax = criteria(machine1, machine2);
+
+            if (cmax < best_cmax) {
+                best_cmax = cmax;
+                best_machinen1 = machine1;
+                best_machinen2 = machine2;
+
+            }
+
+            cout << "Bruteforce configuration " << i << ":" << endl;
+            cout << "Machine 1:\tMachine 2:\n  ";
+            for (int k = 0; k < tasks.size(); ++k) {
+                if (machine1.has_task(tasks[k])){
+                    cout << "1"; // Zadanie na maszynie 1
+                } else {
+                    cout << "0"; // Brak zadania na maszynie 1
+                }
+            }
+            cout << "\t";
+
+            for (int k = 0; k < tasks.size(); ++k) {
+                if (machine2.has_task(tasks[k])) {
+                    cout << "1"; // Zadanie na maszynie 2
+                } else {
+                    cout << "0"; // Brak zadania na maszynie 2
+                }
+            }
+            cout << "\n";
+
+            cout << "Criteria: " << cmax << endl;
+            cout << endl;
+        //}
+    }
+
+    Result result = Result(best_machinen1, best_machinen2, best_cmax);
+    return result;
+}
 
 
 

@@ -23,6 +23,14 @@ int Machine::sum_tasks() {
     return all_tasks;
 }
 
+bool Machine::has_task(int task) const{
+    for(int t : tasks) {
+        if(t == task) {
+            return true;
+        }
+    }
+    return false;
+}
 
 
 

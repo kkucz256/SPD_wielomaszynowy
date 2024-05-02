@@ -16,6 +16,7 @@ public:
     vector<int> get_tasks();
     void add_task(int number);
     int sum_tasks();
+    bool has_task(int task) const;
 };
 
 #endif // MACHINE_H
