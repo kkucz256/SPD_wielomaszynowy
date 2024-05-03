@@ -15,17 +15,15 @@ int Problem::criteria(Machine machine1, Machine machine2) {
 Result Problem::LSA() {
     Machine machine1 = Machine();
     Machine machine2 = Machine();
-    machine1.add_task(tasks[0]);
-    machine2.add_task(tasks[1]);
 
-    for(int i=2;i<size(tasks);i++){
-        if(machine1.sum_tasks() < machine2.sum_tasks())
+    for(int task : tasks){
+        if(machine1.sum_tasks() <= machine2.sum_tasks())
         {
-            machine1.add_task(tasks[i]);
+            machine1.add_task(task);
         }
         else
         {
-            machine2.add_task(tasks[i]);
+            machine2.add_task(task);
         }
 
     }
@@ -43,16 +41,14 @@ Result Problem::LPT() {
         return a > b;
     });
 
-    machine1.add_task(tasks_cpy[0]);
-    machine2.add_task(tasks_cpy[1]);
-    for(int i=2;i<size(tasks_cpy);i++){
-        if(machine1.sum_tasks() < machine2.sum_tasks())
+    for(int task : tasks_cpy){
+        if(machine1.sum_tasks() <= machine2.sum_tasks())
         {
-            machine1.add_task(tasks_cpy[i]);
+            machine1.add_task(task);
         }
         else
         {
-            machine2.add_task(tasks_cpy[i]);
+            machine2.add_task(task);
         }
 
     }
@@ -162,7 +158,7 @@ Result Problem::bruteforce(){
                 best_machinen2 = machine2;
 
             }
-
+            /*
             cout << "Bruteforce configuration " << i << ":" << endl;
             cout << "Machine 1:\tMachine 2:\n  ";
             for (int k = 0; k < tasks.size(); ++k) {
@@ -185,6 +181,7 @@ Result Problem::bruteforce(){
 
             cout << "Criteria: " << cmax << endl;
             cout << endl;
+            */
         //}
     }
 
